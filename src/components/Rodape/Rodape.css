@@ -1,0 +1,47 @@
+/* Rodape.css */
+.rodape {
+  background-color: #222;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+.rodape-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.rodape-texto {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+}
+
+.rodape-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.rodape-links li {
+  margin: 0 1rem;
+}
+
+.rodape-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.rodape-link:hover {
+  color: white;
+}
