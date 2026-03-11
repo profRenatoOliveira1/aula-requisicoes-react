@@ -1,0 +1,1 @@
+// Classe para criar métodos que vão se comunicar com a API
