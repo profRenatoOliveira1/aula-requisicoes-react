@@ -52,16 +52,40 @@ function Endereco(): JSX.Element {
                 </button>
 
                 <section className="detalhes-endereco">
-                    {cepInfo && (
-                        <>
-                            <p>Cidade: {cepInfo.city}</p>
-                            <p>Estado: {cepInfo.state}</p>
-                            <p>Rua: {cepInfo.street}</p>
-                            <p>Bairro: {cepInfo.neighborhood}</p>
-                            <p>Location: {cepInfo.location.type}</p>
-                            <p>Latitude: {cepInfo.location.coordinates.latitude}</p>
-                            <p>Longitude: {cepInfo.location.coordinates.longitude}</p>
-                        </>
+                    {cepInfo ? (
+                        <div className="ctn-endereco-info">
+                            <label htmlFor="cidade">Cidade</label>
+                            <input type="text" name="cidade" id="cidade" value={cepInfo.city} disabled />
+                            <label htmlFor="estado">Estado</label>
+                            <input type="text" name="estado" id="estado" value={cepInfo.state} disabled />
+                            <label htmlFor="rua">Rua</label>
+                            <input type="text" name="rua" id="rua" value={cepInfo.street} disabled />
+                            <label htmlFor="bairro">Bairro</label>
+                            <input type="text" name="bairro" id="bairro" value={cepInfo.neighborhood} disabled />
+                            <label htmlFor="location">Location</label>
+                            <input type="text" name="location" id="location" value={cepInfo.location.type} disabled />
+                            <label htmlFor="latitude">Latitude</label>
+                            <input type="text" name="latitude" id="latitude" value={cepInfo.location.coordinates.latitude} disabled />
+                            <label htmlFor="longitude">Longitude</label>
+                            <input type="text" name="longitude" id="longitude" value={cepInfo.location.coordinates.longitude} disabled />
+                        </div>
+                    ) : (
+                        <div className="ctn-endereco-info">
+                            <label htmlFor="cidade">Cidade</label>
+                            <input type="text" name="cidade" id="cidade" placeholder="Cidade" disabled />
+                            <label htmlFor="estado">Estado</label>
+                            <input type="text" name="estado" id="estado" placeholder="Estado" disabled />
+                            <label htmlFor="rua">Rua</label>
+                            <input type="text" name="rua" id="rua" placeholder="Rua" disabled />
+                            <label htmlFor="bairro">Bairro</label>
+                            <input type="text" name="bairro" id="bairro" placeholder="Bairro" disabled />
+                            <label htmlFor="location">Location</label>
+                            <input type="text" name="location" id="location" placeholder="Location" disabled />
+                            <label htmlFor="latitude">Latitude</label>
+                            <input type="text" name="latitude" id="latitude" placeholder="Latitude" disabled />
+                            <label htmlFor="longitude">Longitude</label>
+                            <input type="text" name="longitude" id="longitude" placeholder="Longitude" disabled />
+                        </div>
                     )}
                 </section>
             </div>
