@@ -1,24 +1,10 @@
 import { type JSX, useState } from "react";
 import './Endereco.css';
-
-interface Endereco {
-    cep: string
-    state: string
-    city: string
-    neighborhood: string | null
-    street: string | null
-    location: {
-        type: string
-        coordinates: {
-            longitude: string | null
-            latitude: string | null
-        }
-    }
-}
+import type EnderecoDTO from "../../../interfaces/EnderecoInterface";
 
 function Endereco(): JSX.Element {
     const [cep, setCep] = useState("");
-    const [cepInfo, setCepInfo] = useState<Endereco | null>(null);
+    const [cepInfo, setCepInfo] = useState<EnderecoDTO | null>(null);
 
     return (
         <section className="endereco">
